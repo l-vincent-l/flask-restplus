@@ -66,7 +66,7 @@ If you need ui on custom url (default is "/"), you can disable default ui and re
     app = Flask(__name__)
     api = Api(app, ui=False)
 
-    @api.route('/doc/', endpoint='doc')
+    @app.route('/doc/', endpoint='doc')
     def swagger_ui():
         return apidoc.ui_for(api)
 
